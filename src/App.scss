@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
+  height: 100%;
+}
+
+.top {
+  flex: 3;
+  background: url("./images/bg-main-mobile.png") no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  .back-of-credit-card-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1.5rem;
+    .back-of-credit-card {
+      width: 70%;
+    }
+  }
+
+  .front-of-credit-card-container {
+    position: absolute;
+    bottom: -4.1rem;
+    margin-left: 1.5rem;
+    width: 80%;
+    color: #fff;
+    .front-of-credit-card {
+      width: 100%;
+    }
+
+    .front-details {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .top-details {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        .circle {
+          margin: 0 8px;
+          border-radius: 50%; 
+          border: 1px solid #fff;
+        }
+
+        .big-circle {
+          height: 35px;
+          width: 35px;
+          background-color: #fff;
+        }
+
+        .small-circle {
+          height: 15px;
+          width: 15px;
+        }
+      }
+
+      .bottom-details {
+        
+      }
+    }
+  }
+
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bottom {
+  flex: 6;
+  background-color: #fff;
 }
