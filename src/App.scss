@@ -21,51 +21,6 @@
     }
   }
 
-  .front-of-credit-card-container {
-    position: absolute;
-    bottom: -4.1rem;
-    margin-left: 1.5rem;
-    width: 80%;
-    color: #fff;
-    .front-of-credit-card {
-      width: 100%;
-    }
-
-    .front-details {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      .top-details {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        .circle {
-          margin: 0 8px;
-          border-radius: 50%; 
-          border: 1px solid #fff;
-        }
-
-        .big-circle {
-          height: 35px;
-          width: 35px;
-          background-color: #fff;
-        }
-
-        .small-circle {
-          height: 15px;
-          width: 15px;
-        }
-      }
-
-      .bottom-details {
-        
-      }
-    }
-  }
-
 }
 
 .bottom {
