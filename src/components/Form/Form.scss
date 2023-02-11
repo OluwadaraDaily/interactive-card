@@ -1,0 +1,12 @@
+.form {
+  padding: 8rem 3rem 1rem 2rem;
+
+  .date-cvc-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    .date, .cvc {
+      flex: 1
+    }
+  }
+}

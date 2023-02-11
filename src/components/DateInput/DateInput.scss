@@ -1,0 +1,31 @@
+.inputs-container {
+  .label-text {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+  }
+  .inputs {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    .month-input, .year-input {
+      font-family: 'Space Grotesk';
+      margin-top: .5rem;
+      padding: 1.5rem;
+      text-align: center;
+      border: .1rem solid #cdcdcd;
+      width: 100%;
+      border-radius: .6rem;
+      flex: 1;
+      font-size: 1.8rem;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .month-input::placeholder, .year-input::placeholder {
+      font-size: 1.8rem;
+      opacity: .4;
+    }
+  }
+}
