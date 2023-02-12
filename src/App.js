@@ -3,6 +3,7 @@ import './App.scss';
 import backOfCreditCard from './images/bg-card-back.png'
 import CreditCard from './components/CreditCard/CreditCard';
 import Form from './components/Form/Form';
+import CreditCardBack from './components/CreditCardBack/CreditCardBack';
 // import CompletePage from './pages/CompletePage/CompletePage';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
   const [cardNumber, setCardNumber] = useState('')
   const [month, setMonth] = useState('')
   const [year, setYear] = useState('')
+  const [cvc, setCvc] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -33,12 +35,15 @@ function App() {
     setYear(e.target.value)
   }
 
+  const handleCvcOnChange = (e) => {
+    e.target.value = e.target.value.substr(0,3)
+    setCvc(e.target.value)
+  }
+
   return (
     <main className="app">
       <div className="top">
-        <div className="back-of-credit-card-container">
-          <img src={backOfCreditCard} className="back-of-credit-card" alt="Back of Credit Card" />
-        </div>
+        <CreditCardBack className='back-of-credit-card-container' cvc={cvc}/>
         <CreditCard cardName={cardName} cardNumber={cardNumber} month={month} year={year}/>
       </div>
       <div className="bottom">
@@ -48,6 +53,7 @@ function App() {
           handleCardNumberChange={handleCardNumberChange}
           handleMonthOnChange={handleMonthOnChange}
           handleYearOnChange={handleYearOnChange}
+          handleCvcOnChange={handleCvcOnChange}
         />
         {/* <CompletePage/> */}
       </div>

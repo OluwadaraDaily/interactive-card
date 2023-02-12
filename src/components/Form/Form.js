@@ -4,7 +4,7 @@ import DateInput from '../DateInput/DateInput'
 import Button from '../Button/Button'
 // import { useState } from 'react'
 
-function Form({ handleSubmit, handleNameChange, handleCardNumberChange, handleMonthOnChange, handleYearOnChange }) {
+function Form({ handleSubmit, handleNameChange, handleCardNumberChange, handleMonthOnChange, handleYearOnChange, handleCvcOnChange }) {
   return (
     <div className="form">
       <form onSubmit={handleSubmit}>
@@ -19,7 +19,7 @@ function Form({ handleSubmit, handleNameChange, handleCardNumberChange, handleMo
             />
           </div>
           <div className="cvc">
-            <FormInput label="CVC" placeholder='e.g 123' />
+            <FormInput label="CVC" handleOnChange={handleCvcOnChange} placeholder='e.g 123' />
           </div>
         </div>
         <Button btnText="Confirm" type='submit' />
