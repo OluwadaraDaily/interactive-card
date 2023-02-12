@@ -1,7 +1,7 @@
 import './CreditCard.scss'
 import frontOfCreditCard from '../../images/bg-card-front.png'
 
-function CreditCard() {
+function CreditCard({ cardName, cardNumber, month, year }) {
   return (
     <div className="front-of-credit-card-container">
       <div style={{ position: 'relative' }}>
@@ -13,11 +13,15 @@ function CreditCard() {
           </div>
           <div className="bottom-details">
             <div>
-              <input type="number" className="card-number" placeholder='0000 0000 0000 0000' />
+              <input type="text" className="card-number" value={cardNumber} placeholder='0000 0000 0000 0000' readOnly/>
             </div>
             <div className="name-date-div">
-              <input type="text" className="card-name" placeholder='JANE APPLEASED' />
-              <input type="number" className="card-date" placeholder='00/00' />
+              <input type="text" value={cardName} className="card-name" placeholder='JANE APPLEASED' readOnly/>
+              <div className="dates">
+                <input type="text" value={month} className="card-date" placeholder='00' readOnly/>
+                <span className='divider'>/</span>
+                <input type="text" value={year} className="card-date" placeholder='00' readOnly/>
+              </div>
               
             </div>
           </div>
