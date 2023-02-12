@@ -1,23 +1,55 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 import './App.scss';
 import backOfCreditCard from './images/bg-card-back.png'
 import CreditCard from './components/CreditCard/CreditCard';
 import Form from './components/Form/Form';
-import CompletePage from './pages/CompletePage/CompletePage';
+// import CompletePage from './pages/CompletePage/CompletePage';
 
 function App() {
-  const completed = false
+  const [cardName, setCardName] = useState('')
+  const [cardNumber, setCardNumber] = useState('')
+  const [month, setMonth] = useState('')
+  const [year, setYear] = useState('')
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  } 
+  const handleNameChange = (e) => {
+    setCardName(e.target.value.toUpperCase())
+  }
+  const handleCardNumberChange = (e) => {
+    const numbersWithoutSpace = e.target.value.split(" ").join("").substr(0, 16)
+    const arrayOfNumbersInFours = numbersWithoutSpace.match(/.{1,4}/g);
+    e.target.value = arrayOfNumbersInFours.join(' ')
+    
+    setCardNumber(e.target.value)
+  }
+  const handleMonthOnChange = (e) => {
+    e.target.value = e.target.value.substr(0,2)
+    setMonth(e.target.value)
+  }
+  const handleYearOnChange = (e) => {
+    e.target.value = e.target.value.substr(0,2)
+    setYear(e.target.value)
+  }
+
   return (
     <main className="app">
       <div className="top">
         <div className="back-of-credit-card-container">
           <img src={backOfCreditCard} className="back-of-credit-card" alt="Back of Credit Card" />
         </div>
-        <CreditCard></CreditCard>
+        <CreditCard cardName={cardName} cardNumber={cardNumber} month={month} year={year}/>
       </div>
       <div className="bottom">
-        { !completed && <Form/> }
-        { completed && <CompletePage/> }
+        <Form 
+          handleSubmit={handleSubmit}
+          handleNameChange={handleNameChange}
+          handleCardNumberChange={handleCardNumberChange}
+          handleMonthOnChange={handleMonthOnChange}
+          handleYearOnChange={handleYearOnChange}
+        />
+        {/* <CompletePage/> */}
       </div>
     </main>
   );

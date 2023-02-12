@@ -1,13 +1,13 @@
 import './DateInput.scss'
 
-function DateInput({ label }) {
+function DateInput({ label, handleMonthOnChange, handleYearOnChange }) {
   return (
     <>
       <div className="inputs-container">
         <label className='label-text'>{ label }</label> <br/>
         <div className="inputs">
-          <input type="number" className='month-input' placeholder='MM' />
-          <input type="number" className='year-input' placeholder='YY'/>
+          <input type="text" className='month-input' onChange={handleMonthOnChange} placeholder='MM' />
+          <input type="text" className='year-input' onChange={handleYearOnChange} placeholder='YY'/>
         </div>
       </div>
     </>
