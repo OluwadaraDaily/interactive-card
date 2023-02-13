@@ -1,10 +1,8 @@
 import { useState } from 'react';
 import './App.scss';
-import backOfCreditCard from './images/bg-card-back.png'
 import CreditCard from './components/CreditCard/CreditCard';
 import Form from './components/Form/Form';
 import CreditCardBack from './components/CreditCardBack/CreditCardBack';
-// import CompletePage from './pages/CompletePage/CompletePage';
 
 function App() {
   const [cardName, setCardName] = useState('')

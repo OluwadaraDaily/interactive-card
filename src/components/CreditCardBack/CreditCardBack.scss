@@ -18,4 +18,9 @@
     opacity: .8;
     font-family: 'Space Grotesk';
   }
+
+  .cvc-input::placeholder {
+    color: #fff;
+    opacity: .5;
+  }
 }
