@@ -8,14 +8,20 @@
   }
   .cvc-input {
     position: absolute;
-    top: 6rem;
+    top: 6.5rem;
     right: 3.5rem;
     width: 3rem;
     border: none;
     height: 2.1rem;
-    background-color: #d0d0dd;
+    background-color: transparent;
     color: #fff;
     opacity: .8;
     font-family: 'Space Grotesk';
+    font-size: 1.2rem;
+  }
+
+  .cvc-input::placeholder {
+    color: #fff;
+    opacity: .5;
   }
 }

@@ -6,7 +6,7 @@ const CreditCardBack = ({ cvc }) => {
     <div className="back-of-credit-card-container">
       <div className='inner-div'>
         <img src={backOfCreditCard} className="back-of-credit-card" alt="Back of Credit Card" />
-        <input type="text" value={cvc} className='cvc-input' readOnly/>  
+        <input type="text" value={cvc} className='cvc-input' placeholder='000' readOnly/>  
       </div>
     </div>
   )

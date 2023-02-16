@@ -1,8 +1,10 @@
 import './Button.scss'
 
-const Button = ({ type = 'button', btnText, handleClick = () => {} }) => {
+const Button = ({ type = 'button', btnText, handleClick = () => {}, disabled = false }) => {
   return (
-    <button className='btn' type={type} onClick={handleClick}>{ btnText }</button>
+    <>
+      <button className='btn' type={type} onClick={handleClick} disabled={disabled}>{ btnText }</button>
+    </>
   )
 }
 
