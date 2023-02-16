@@ -9,3 +9,12 @@
   font-size: 1.8rem;
   font-family: 'Space Grotesk';
 }
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #210a2f;
+  cursor: not-allowed;
+  pointer-events: all !important;
+}

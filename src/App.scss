@@ -5,16 +5,14 @@
 }
 
 .top {
-  flex: 3;
+  height: 50rem;
   background: url("./images/bg-main-mobile.png") no-repeat;
   background-size: cover;
   position: relative;
   display: flex;
   align-items: center;
-
 }
 
 .bottom {
-  flex: 6;
   background-color: #fff;
 }
