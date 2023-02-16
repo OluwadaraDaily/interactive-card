@@ -16,8 +16,6 @@ This is a solution to the [Interactive card details form challenge on Frontend M
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 The interactive card project is basically about creating a simple page where a user can input their card details and save their card details. It is purely a frontend implementation for now and the data is not being stored anywhere. I worked on this to test my ReactJS skills as I have been learning it for a bit now. It was a good exercise which taught me a lot about React JS, indirectly passing props and so on.
@@ -43,7 +41,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/OluwadaraDaily/interactive-card)
-- Live Site URL: [N/A](https://your-live-site-url.com)
+- Live Site URL: [Interactive Cards](https://carrds.netlify.app)
 
 ## My process
 
