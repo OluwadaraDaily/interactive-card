@@ -6,7 +6,7 @@
 
 .top {
   height: 50rem;
-  background: url("./images/bg-main-mobile.png") no-repeat;
+  background: url("../../images/bg-main-mobile.png") no-repeat;
   background-size: cover;
   position: relative;
   display: flex;
@@ -15,4 +15,5 @@
 
 .bottom {
   background-color: #fff;
+  padding: 8rem 3rem 1rem 2rem;
 }

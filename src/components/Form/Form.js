@@ -4,7 +4,7 @@ import DateInput from '../DateInput/DateInput'
 import Button from '../Button/Button'
 import { useState } from 'react'
 
-function Form({ handleSubmit, handleNameChange, handleCardNumberChange, handleMonthOnChange, handleYearOnChange, handleCvcOnChange, errorMessages }) {
+function Form({ handleSubmit, handleNameChange, handleCardNumberChange, handleMonthOnChange, handleYearOnChange, handleCvcOnChange }) {
   const [nameError, setNameError] = useState(true)
   const [cardNumberError, setCardNumberError] = useState(true)
   const [cvcError, setCvcError] = useState(true)
@@ -64,7 +64,7 @@ function Form({ handleSubmit, handleNameChange, handleCardNumberChange, handleMo
             />
           </div>
         </div>
-        <Button btnText="Confirm" type='submit' disabled={!(dateFieldError && cvcError && cardNumberError && nameError)} />
+        <Button btnText="Confirm" type='submit' disabled={(dateFieldError === false && cvcError === false && cardNumberError === false && nameError === false) ? false : true} />
       </form>
     </div>
   )
