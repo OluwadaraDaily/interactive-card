@@ -68,6 +68,7 @@ function MainLayout() {
           handleMonthOnChange={handleMonthOnChange}
           handleYearOnChange={handleYearOnChange}
           handleCvcOnChange={handleCvcOnChange}
+          className="form"
         /> }
         { submitForm && <CompletePage handleOnClick={handleContinueOnClick}/> }
       </div>
